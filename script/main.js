@@ -96,7 +96,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
         ".hbd-chatbox span",
-        1.5, {
+        1.0, {
             visibility: "visible",
         },
         0.05
@@ -139,14 +139,16 @@ const animationTimeline = () => {
         },
         "+=1.5"
     )
-    .to(
-        ".idea-5 span",
-        0.7, {
-            rotation: 90,
-            x: 8,
-        },
-        "+=1.4"
-    )
+    .to(   
+        ".idea-5 span", {
+        keyframes: [
+            { scale: 1.3, duration: 0.2 },
+            { scale: 1,   duration: 0.1 },
+            { scale: 1.3, duration: 0.2 },
+            { scale: 1,   duration: 0.5 }
+    ],
+        ease: "power1.inOut"
+    }, "+=1.4")
     .to(
         ".idea-5",
         0.7, {
@@ -199,7 +201,7 @@ const animationTimeline = () => {
         "-=2"
     )
     .from(".hat", 0.5, {
-        x: -100,
+        x: -100 ,
         y: 350,
         rotation: -180,
         opacity: 0,
@@ -245,8 +247,8 @@ const animationTimeline = () => {
             visibility: "visible",
             opacity: 0,
             scale: 80,
-            repeat: 3,
-            repeatDelay: 1.4,
+            repeat: 7,
+            repeatDelay: 4.5,
         },
         0.3
     )

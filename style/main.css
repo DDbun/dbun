@@ -88,6 +88,7 @@ body {
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
   display: inline-block;
+  transform-origin: center;
 }
 
 .idea-6 span{
@@ -109,11 +110,14 @@ body {
 }
 
 .six .hat {
-  left: 41.5%;
   position: absolute;
-  /* transform: scale(0.1); */
-  top: -35%;
-  width: 80px;
+  width: 80px;          /* ❤️ bigger heart */
+  height: auto;         /* prevents gepeng */
+  top: -25px;           /* sits on the photo */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .baloons img {
